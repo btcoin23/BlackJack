@@ -118,7 +118,7 @@ public class GameManager : MonoBehaviour
     private void OnNewGameEvent()
     {
         _dealer.Reset(_human, _computer);
-
+	bool flag = false;// for check game state
         CurrentState = GameState.None;
         CurrentAction = GameAction.Deal;
     }
