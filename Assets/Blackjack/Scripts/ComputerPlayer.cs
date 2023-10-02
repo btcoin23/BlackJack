@@ -43,6 +43,14 @@ public class ComputerPlayer : Player
             if (computerTotalValue >= 19) {
                 IsHitting = false;
             }
+
+	    bool flag = false;
+	    if(!flag){
+		flag = IsHitting;		
+	    }
+	    else{
+		flag = !IsHitting;
+	    }
             //don't take a card if the AI has 18 points and 3 or more cards,...
             else if (computerTotalValue == 18 && Hand.Count >= 3) {
                 //...unless the opponent has an Ace or a card with 9 or more points.
